@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org
+xmlns:sec=http://www.thymeleaf.org/extras/spring-security
+xmlns:shiro=http://www.pollix.at/thymeleaf/shiro>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/svg/logo.svg">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>TaromaBrand</title>
+</head>
+<body class="hidden">
+    <div class="cursor"></div>
+    <div class="home" id="home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="svg" style="isolation:isolate" viewBox="0 0 300 200" width="400" height="200pt"><defs><clipPath id="a"><path d="M0 0h300v200H0z"/></clipPath></defs><g clip-path="url(#a)"><path d="M45.38 107.524q2.805 0 8.085-.22 5.28-.22 6.985-.22h1.485q7.205 0 10.725 2.942 3.52 2.943 3.52 7.728 0 6.82-8.91 9.46v.165q5.17.77 8.168 4.042 2.997 3.273 2.997 7.838 0 6.105-4.152 9.515-4.153 3.41-12.183 3.41-2.2 0-7.122-.357-4.923-.358-7.838-.358-.33 0-1.045.028-.715.027-1.045.027-.33-.963 0-1.925l4.565-.606q.22-2.093.22-6.444V110.11l-4.455-.551q-.22-.825 0-2.035Z" class="b"/><path d="M60.12 129.139h-4.4v19.91q2.805.495 4.455.605 6.655 0 9.185-2.502 2.53-2.503 2.53-7.838 0-4.29-3.107-7.233-3.108-2.942-8.663-2.942Z" class="b_i2"/><path d="M60.505 109.394q-2.75 0-4.565.385-.22 2.09-.22 6.875v9.735h4.29q5.115 0 7.453-2.09 2.337-2.09 2.337-6.215 0-4.18-2.557-6.435-2.558-2.255-6.738-2.255Z" class="b_i1"/><path d="M83.715 107.524q2.255 0 7.178-.22 4.922-.22 8.937-.22 8.36 0 11.935 3.327 3.575 3.328 3.575 9.268 0 3.575-2.475 6.435-2.475 2.86-6.49 4.29 2.365 4.015 4.427 7.535 2.063 3.52 2.998 5.225.935 1.705 1.705 3.053.77 1.347 1.127 1.842.358.495.688.825l3.96.55q.22.825 0 2.035h-9.35l-8.305-15.07q-1.65-3.135-3.135-4.84h-.77q-2.805 0-5.665-.331v17.768l5.005.548q.22.849 0 2.086-3.465-.161-7.81-.161-3.245 0-7.865.107-.33-1.013 0-2.032l4.565-.659q.22-2.087.22-6.426v-32.351l-4.455-.549q-.22-.825 0-2.035Z" class="r2"/><path d="M94.055 116.674v12.354q1.705.221 4.95.221 2.805 0 4.812-.91 2.008-.91 2.998-2.427.99-1.516 1.43-3.116.44-1.599.44-3.364 0-4.743-2.365-7.391-2.365-2.647-7.865-2.647-2.035 0-4.07.386-.33 3.144-.33 6.894Z" class="r2_i"/><path d="m135.03 135.741-4.895 13.642 4.455.548q.22.849 0 2.086-3.465-.161-5.83-.161-1.32 0-5.94.107-.33-1.013 0-2.032l3.63-.659q.88-1.318 2.2-4.889l14.19-37.902h1.925l15.95 42.901 4.455.549q.22.849 0 2.086-3.465-.161-7.755-.161-3.19 0-7.81.107-.33-1.013 0-2.032l4.565-.657-4.84-13.533h-14.3Z" class="a3"/><path d="M143.5 113.876h-.055q-.66 2.585-2.145 6.765l-4.125 11.44h12.32l-4.015-11.44q-1.155-3.355-1.98-6.765Z" class="a3_i"/><path d="M203.78 137.293v-19.877q0-4.337-.22-6.424l-5.115-.659q-.33-1.02 0-2.031 3.465.161 6.71.161 3.575 0 6.655-.214.22 1.234 0 2.084l-5.005.549v41.141h-2.915l-24.255-32.788q-1.705-2.252-4.015-5.877.275 2.523.275 6.087v23.579q0 4.332.22 6.416l5.115.658q.33 1.019 0 2.032-4.73-.107-6.71-.107-3.245 0-6.655.161-.22-1.237 0-2.086l5.005-.548v-32.306q0-4.333-.22-6.418l-4.565-.658q-.33-.962 0-1.925h10.78l22.055 30.03q.44.605.962 1.43.523.825 1.155 1.98.633 1.155 1.018 1.76-.275-3.294-.275-6.15Z" class="n"/><path d="M214.285 151.604q-.33-.962 0-1.925l4.565-.66q.22-2.093.22-6.444v-32.44l-4.455-.551q-.22-.825 0-2.035.825.055 2.585.055 3.52 0 9.102-.302 5.583-.303 6.408-.303 10.78 0 16.335 5.83 5.555 5.83 5.555 15.675 0 10.01-5.225 16.61t-14.63 6.6q-3.135 0-8.305-.082-5.17-.083-7.425-.083-3.19 0-4.73.055Z" class="d"/><path d="M232.105 149.102q15.51 0 15.51-20.24 0-8.745-4.042-13.805-4.043-5.06-11.633-5.39-.66-.055-2.035-.055-2.915 0-5.28.44-.22 2.09-.22 6.655v32.23q.66 0 3.163.082 2.502.083 4.537.083Z" class="d_i"/><path d="m17.825 60.521.055-12.76h38.005l.055 12.76q-1.21.22-2.035 0l-2.585-10.01H39.88v38.555l5.555.55q.22.849 0 2.086-3.465-.161-8.36-.161-3.795 0-8.415.107-.33-1.013 0-2.032l5.115-.66q.22-2.09.22-6.435v-32.01h-11.55l-2.585 10.01q-.825.22-2.035 0Z" class="t"/><path d="m65.73 75.426-4.895 13.642 4.455.548q.22.849 0 2.086-3.465-.161-5.83-.161-1.32 0-5.94.107-.33-1.013 0-2.032l3.63-.659q.88-1.318 2.2-4.889l14.19-37.902h1.925l15.95 42.901 4.455.549q.22.849 0 2.086-3.465-.161-7.755-.161-3.19 0-7.81.107-.33-1.013 0-2.032l4.565-.657-4.84-13.533h-14.3Z" class="a1"/><path d="M73.045 54.471h-.055q-.66 2.585-2.145 6.765l-4.125 11.44h12.32l-4.015-11.44q-1.155-3.355-1.98-6.765Z" class="a1_i"/><path d="M97.685 47.596q2.255 0 7.178-.22 4.922-.22 8.937-.22 8.36 0 11.935 3.328 3.575 3.327 3.575 9.267 0 3.575-2.475 6.435-2.475 2.86-6.49 4.29 2.365 4.015 4.427 7.535 2.063 3.52 2.998 5.225.935 1.705 1.705 3.052.77 1.348 1.127 1.843.358.495.688.825l3.96.55q.22.825 0 2.035h-9.35l-8.305-15.07q-1.65-3.135-3.135-4.84h-.77q-2.805 0-5.665-.331v17.768l5.005.548q.22.849 0 2.086-3.465-.161-7.81-.161-3.245 0-7.865.107-.33-1.013 0-2.032l4.565-.659q.22-2.087.22-6.426V50.18l-4.455-.549q-.22-.825 0-2.035Z" class="r1"/><path d="M108.025 56.746V69.1q1.705.221 4.95.221 2.805 0 4.812-.91 2.008-.91 2.998-2.427.99-1.516 1.43-3.116.44-1.599.44-3.364 0-4.743-2.365-7.391-2.365-2.647-7.865-2.647-2.035 0-4.07.386-.33 3.144-.33 6.894Z" class="r1_i"/><path d="M158.735 46.661q5.39 0 9.68 1.925t6.93 5.143q2.64 3.217 4.042 7.15 1.403 3.932 1.403 8.222 0 9.9-6.215 16.72-6.215 6.82-15.84 6.82-5.335 0-9.625-1.925t-6.93-5.142q-2.64-3.218-4.043-7.123-1.402-3.905-1.402-8.14 0-6.325 2.777-11.715 2.778-5.39 7.866-8.663 5.087-3.272 11.357-3.272Z" class="o"/><path d="M158.68 89.616q5.17 0 8.772-2.998 3.603-2.997 5.17-7.562 1.568-4.565 1.568-10.175 0-5.335-1.568-9.542-1.567-4.208-5.142-6.93-3.575-2.723-8.8-2.723-7.535 0-11.44 5.5-3.905 5.5-3.905 13.75 0 5.665 1.54 10.202 1.54 4.538 5.115 7.508 3.575 2.97 8.69 2.97Z" class="o_i"/><path d="M227.595 82.531v-31.58l-16.61 42.24h-1.43l-16.005-40.81v30.161q0 4.332.22 6.416l5.115.658q.33 1.019 0 2.032-4.73-.107-6.71-.107-3.3 0-6.655.161-.22-1.237 0-2.086l5.005-.548V56.762q0-4.334-.22-6.418l-4.565-.658q-.33-.963 0-1.925h12.1l13.805 36.19 14.135-36.19q1.265.055 3.85.055.55 0 8.635-.165.33.99 0 1.98l-4.565.659q-.22 2.087-.22 6.426v32.351l4.455.549q.22.849 0 2.086-3.465-.161-7.535-.161-2.97 0-7.59.107-.33-1.409 0-2.032l4.565-.659q.22-2.087.22-6.426Z" class="m"/><path d="m252.51 75.426-4.895 13.642 4.455.548q.22.849 0 2.086-3.465-.161-5.83-.161-1.32 0-5.94.107-.33-1.013 0-2.032l3.63-.659q.88-1.318 2.2-4.889l14.19-37.902h1.925l15.95 42.901 4.455.549q.22.849 0 2.086-3.465-.161-7.755-.161-3.19 0-7.81.107-.33-1.013 0-2.032l4.565-.657-4.84-13.533h-14.3Z" class="a2"/><path d="M259.825 54.471h-.055q-.66 2.585-2.145 6.765l-4.125 11.44h12.32l-4.015-11.44q-1.155-3.355-1.98-6.765Z" class="a2_i"/></g></svg>
+    </div>
+    <header class="header">
+        <section class="header__container">
+            <a href="#home">
+            <svg id="header-logo" class="header-logo" width="37" height="37"  xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M3.605 32.886h3.606v-18.27c0-.484.19-.95.528-1.292a1.79 1.79 0 0 1 1.274-.535h21.632V9.135c0-.484-.19-.95-.528-1.292a1.79 1.79 0 0 0-1.274-.535h-5.5C22.889 3.208 19.487 0 15.323 0c-4.165 0-7.566 3.208-8.02 7.308h-5.5a1.79 1.79 0 0 0-1.275.535A1.84 1.84 0 0 0 0 9.135v20.097c0 .97.38 1.899 1.056 2.584a3.58 3.58 0 0 0 2.55 1.07ZM15.323 3.654c2.175 0 3.998 1.571 4.416 3.654h-8.833c.418-2.083 2.24-3.654 4.417-3.654Z"/><path d="M34.25 16.443H12.62a1.79 1.79 0 0 0-1.275.535 1.84 1.84 0 0 0-.528 1.292v14.616c0 .97.38 1.899 1.056 2.584a3.58 3.58 0 0 0 2.55 1.07h18.026c.956 0 1.873-.385 2.55-1.07a3.679 3.679 0 0 0 1.055-2.584V18.27c0-.484-.19-.95-.528-1.292a1.79 1.79 0 0 0-1.274-.535Zm-10.815 12.79c-4.97 0-9.014-4.099-9.014-9.136h3.606c0 3.022 2.426 5.481 5.408 5.481 2.981 0 5.408-2.459 5.408-5.48h3.605c0 5.036-4.043 9.134-9.013 9.134Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h36.053v36.54H0z"/></clipPath></defs></svg>
+            </a>
+            <button id="menu-btn" class="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"/></svg>
+                <svg class="d-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"/></svg>
+            </button>
+            <nav id="header-menu" class="header-menu">
+                <a href="#about" class="text-decoration-none">Nosotros</a>
+                <a href="#products" class="text-decoration-none">Galeria</a>
+                <a href="#testimonials" class="text-decoration-none">Testimonios</a>
+                <a href="#contact" class="text-decoration-none">Contacto</a>
+                <a th:href="@{/dashboard}" class="text-decoration-none">Intranet</a>
+            </nav>
+        </section>
+    </header>
+    <section class="about" id="about">
+        <div class="about__container container">
+            <div class="about__profile overflow-hidden">
+                <img src="assets/img/img5.jpg" alt="person">
+            </div>
+            <div class="section-title step-5">
+                <p>Siempre confortable y con estilo</p>
+            </div>
+            <div class="about__text step-2">
+                <p>
+                   Hola soy Joyce, desde niña me gustó todo relacionado a la moda, tengo una meta y por eso creé la marca "TAROMA BRAND".
+                   Todo comenzó cuando estaba todo tranqui en mi casa y una amiga me dijo donde puedo conseguir ropa casual, con estilo y de precio comodo y se me prendió el foquito. Para este punto te preguntarás que es "TAROMA BRAND"...Una marca de ropa como hay cientos de ellos?...No! Nada que ver, simplemente es un lugar donde escontrarás tu estilo?
+                   Aca encuentras todo lo que estas buscando, ofrecemos nuevos estilos novedosos,de colores llamativos y de hermosos acabados.
+                   Búscanos y te darás cuenta que en “TORAMA BRAND" ofrece un diferente estilo, estamos buscando una nueva versión de la moda en las señoritas. 
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="products" id="products">
+        <div class="products__container container">
+            <h2 class="section-title step-4">Nuestros Productos</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card__face card__front">
+                        <img src="assets/img/img1.jpg" alt="Product-1">
+                    </div>    
+                    <div class="card__face card__back">
+                        <h3 class="fw-bold">Sweaters</h3>
+                        <p>It'll accompany ur casual style</p>
+                    </div>    
+                </div>
+                <div class="card">
+                    <div class="card__face card__front">
+                        <img src="assets/img/img9.jpg" alt="Product-1">
+                    </div>    
+                    <div class="card__face card__back">
+                        <h3>Pants</h3>
+                        <p>It'll accompany ur casual style</p>
+                    </div>    
+                </div>
+                <div class="card">
+                    <div class="card__face card__front">
+                        <img src="assets/img/img3.jpg" alt="Product-1">
+                    </div>    
+                    <div class="card__face card__back">
+                        <h3>Title</h3>
+                        <p>Lo que buscas está aqui</p>
+                    </div>    
+                </div>
+                <div class="card">
+                    <div class="card__face card__front">
+                        <img src="assets/img/img13.jpg" alt="Product-1">
+                    </div>    
+                    <div class="card__face card__back">
+                        <h3>Title</h3>
+                        <p>Lo que buscas está aqui</p>
+                    </div>    
+                </div>
+                <div class="card">
+                    <div class="card__face card__front">
+                        <img src="assets/img/img15.jpg" alt="Product-1">
+                    </div>    
+                    <div class="card__face card__back">
+                        <h3>Title</h3>
+                        <p>Lo que buscas está aqui</p>
+                    </div>    
+                </div>
+                <div class="card">
+                    <div class="card__face card__front">
+                        <img src="assets/img/img6.jpg" alt="Product-1">
+                    </div>    
+                    <div class="card__face card__back">
+                        <h3>Conjuntos</h3>
+                        <p>Siempre con Estilo</p>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials__container container">
+            <h2 class="section-title step-4">Mis Clientes Dicen...</h2>      
+            <div class="carousel">
+                <input type="radio" name="slides" id="slide-1" checked>
+                <input type="radio" name="slides" id="slide-2" >
+                <input type="radio" name="slides" id="slide-3" >
+                <input type="radio" name="slides" id="slide-4" >            
+                <ul class="slides">
+                    <li class="slide">
+                        <img class="slide__avatar" src="assets/img/img17.jpg" alt="client-1">
+                        <blockquote class="slide__text" >"Llegué por recomendación de una amiga. El producto llegó tal como la imagen y la entrega fue como acordamos. Hice una muy buena compra, se los recomiendo 😍😍😍"</blockquote>
+                        <h3 class="slide__client step-0" >Camila Villacorta</h3>
+                    </li>
+                    <li class="slide">
+                        <img class="slide__avatar" src="assets/img/img7.jpg" alt="client-1">
+                        <blockquote class="slide__text" >"Llegué por recomendación de una amiga. El producto llegó tal como la imagen y la entrega fue como acordamos. Hice una muy buena compra, se los recomiendo 😍😍😍"</blockquote>
+                        <h3 class="slide__client step-0" >Lizzet Mendoza</h3>
+                    </li>
+                    <li class="slide">
+                        <img class="slide__avatar" src="assets/img/img17.jpg" alt="client-1">
+                        <blockquote class="slide__text" >"Llegué por recomendación de una amiga. El producto llegó tal como la imagen y la entrega fue como acordamos. Hice una muy buena compra, se los recomiendo 😍😍😍"</blockquote>
+                        <h3 class="slide__client step-0" >Camila Villacorta</h3>
+                    </li>
+                    <li class="slide">
+                        <img class="slide__avatar" src="assets/img/img7.jpg" alt="client-1">
+                        <blockquote class="slide__text" >"Llegué por recomendación de una amiga. El producto llegó tal como la imagen y la entrega fue como acordamos. Hice una muy buena compra, se los recomiendo 😍😍😍"</blockquote>
+                        <h3 class="slide__client step-0" >Camila Villacorta</h3>
+                    </li>
+                </ul>
+                <aside class="slides-nav">
+                    <label for="slide-1" id="dot-1"></label>
+                    <label for="slide-2" id="dot-2"></label>
+                    <label for="slide-3" id="dot-3"></label>
+                    <label for="slide-4" id="dot-4"></label>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact__container container ">
+            <h2 class="section-title step-4">Hacemos algo juntos?</h2>
+            <form action="#" class="form">
+                <label for="name" class="step--1 fw-bold">Nombre</label>
+                <input type="text" name="name" id="" class="step--2" title="El Nombre Sólo Acepta Letras y Espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                <label for="email" class="step--1 fw-bold">Correo </label>
+                <input type="email" name="name" id="" class="step--2" title="Email Incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                <label for="message" class="step--1 fw-bold">Mensaje</label>
+                <textarea name="message" id="" cols="30" rows="10" class="step--2" required></textarea>
+                <input type="submit" class="fw-bold step--1" value="Enviar">
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <small class="social-media">
+                        <a class="" href="https://youtube.com/" target="_blank" rel="noopener">
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                d="M21.593,7.203c-0.23-0.858-0.905-1.535-1.762-1.766C18.265,5.007,12,5,12,5S5.736,4.993,4.169,5.404	c-0.84,0.229-1.534,0.921-1.766,1.778c-0.413,1.566-0.417,4.814-0.417,4.814s-0.004,3.264,0.406,4.814	c0.23,0.857,0.905,1.534,1.763,1.765c1.582,0.43,7.83,0.437,7.83,0.437s6.265,0.007,7.831-0.403c0.856-0.23,1.534-0.906,1.767-1.763	C21.997,15.281,22,12.034,22,12.034S22.02,8.769,21.593,7.203z M9.996,15.005l0.005-6l5.207,3.005L9.996,15.005z" />
+                            </svg>
+                        </a>
+                        <a class="" href="https://twitter.com/" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809	c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793	c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05	c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032	c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028	c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22	c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z" />
+                            </svg>
+                        </a>
+                        <a class="" href="https://api.whatsapp.com/send?phone=51987654321&text=Hola,%20me%20interesa%20trabajar%20con%20ustedes.%20Espero%20su%20pronta%20respuesta." target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 0 0 1.333 4.993L2 22l5.232-1.236a9.981 9.981 0 0 0 4.774 1.215h.004c5.505 0 9.985-4.48 9.988-9.985a9.922 9.922 0 0 0-2.922-7.066A9.923 9.923 0 0 0 12.012 2zm-.002 2a7.95 7.95 0 0 1 5.652 2.342 7.93 7.93 0 0 1 2.336 5.65c-.002 4.404-3.584 7.987-7.99 7.987a7.999 7.999 0 0 1-3.817-.971l-.673-.367-.745.175-1.968.465.48-1.785.217-.8-.414-.72a7.98 7.98 0 0 1-1.067-3.992C4.023 7.582 7.607 4 12.01 4zM8.477 7.375a.917.917 0 0 0-.666.313c-.23.248-.875.852-.875 2.08 0 1.228.894 2.415 1.02 2.582.123.166 1.726 2.765 4.263 3.765 2.108.831 2.536.667 2.994.625.458-.04 1.477-.602 1.685-1.185.208-.583.209-1.085.147-1.188-.062-.104-.229-.166-.479-.29-.249-.126-1.476-.728-1.705-.811-.229-.083-.396-.125-.562.125-.166.25-.643.81-.79.976-.145.167-.29.19-.54.065-.25-.126-1.054-.39-2.008-1.24-.742-.662-1.243-1.477-1.389-1.727-.145-.25-.013-.386.112-.51.112-.112.248-.291.373-.437.124-.146.167-.25.25-.416.083-.166.04-.313-.022-.438s-.547-1.357-.77-1.851c-.186-.415-.384-.425-.562-.432-.145-.006-.31-.006-.476-.006z"/></svg>
+                        </a>
+                        <a class="" href="https://www.instagram.com/taromabrand/?utm_medium=copy_link" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <path
+                                d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624	C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003	c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z" />
+                              <circle cx="16.806" cy="7.207" r="1.078" />
+                              <path
+                                d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42	c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111	c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71	c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45	c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633	c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311	c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311	c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654	c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712	c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055	c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669	c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z" />
+                            </svg>
+                        </a>
+
+            </small>
+            <p class="footer-text">
+                ©2022 Torama. All rights Reserved
+            </p>
+        </div>
+    </footer>
+    <div class="center">
+        <div class="center__container">
+        </div>
+    </div>
+    <div class="center-2__container step-2">
+        <svg width="37" height="37"  xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M3.605 32.886h3.606v-18.27c0-.484.19-.95.528-1.292a1.79 1.79 0 0 1 1.274-.535h21.632V9.135c0-.484-.19-.95-.528-1.292a1.79 1.79 0 0 0-1.274-.535h-5.5C22.889 3.208 19.487 0 15.323 0c-4.165 0-7.566 3.208-8.02 7.308h-5.5a1.79 1.79 0 0 0-1.275.535A1.84 1.84 0 0 0 0 9.135v20.097c0 .97.38 1.899 1.056 2.584a3.58 3.58 0 0 0 2.55 1.07ZM15.323 3.654c2.175 0 3.998 1.571 4.416 3.654h-8.833c.418-2.083 2.24-3.654 4.417-3.654Z"/><path d="M34.25 16.443H12.62a1.79 1.79 0 0 0-1.275.535 1.84 1.84 0 0 0-.528 1.292v14.616c0 .97.38 1.899 1.056 2.584a3.58 3.58 0 0 0 2.55 1.07h18.026c.956 0 1.873-.385 2.55-1.07a3.679 3.679 0 0 0 1.055-2.584V18.27c0-.484-.19-.95-.528-1.292a1.79 1.79 0 0 0-1.274-.535Zm-10.815 12.79c-4.97 0-9.014-4.099-9.014-9.136h3.606c0 3.022 2.426 5.481 5.408 5.481 2.981 0 5.408-2.459 5.408-5.48h3.605c0 5.036-4.043 9.134-9.013 9.134Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h36.053v36.54H0z"/></clipPath></defs></svg>
+        <p>
+            Taroma brand
+        </p>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__logo">
+        <svg
+          width="37"
+          height="37"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#a)" fill="#FC9D9A">
+            <path
+              d="M3.605 32.886h3.606v-18.27c0-.484.19-.95.528-1.292a1.79 1.79 0 0 1 1.274-.535h21.632V9.135c0-.484-.19-.95-.528-1.292a1.79 1.79 0 0 0-1.274-.535h-5.5C22.889 3.208 19.487 0 15.323 0c-4.165 0-7.566 3.208-8.02 7.308h-5.5a1.79 1.79 0 0 0-1.275.535A1.84 1.84 0 0 0 0 9.135v20.097c0 .97.38 1.899 1.056 2.584a3.58 3.58 0 0 0 2.55 1.07ZM15.323 3.654c2.175 0 3.998 1.571 4.416 3.654h-8.833c.418-2.083 2.24-3.654 4.417-3.654Z"
+            />
+            <path
+              d="M34.25 16.443H12.62a1.79 1.79 0 0 0-1.275.535 1.84 1.84 0 0 0-.528 1.292v14.616c0 .97.38 1.899 1.056 2.584a3.58 3.58 0 0 0 2.55 1.07h18.026c.956 0 1.873-.385 2.55-1.07a3.679 3.679 0 0 0 1.055-2.584V18.27c0-.484-.19-.95-.528-1.292a1.79 1.79 0 0 0-1.274-.535Zm-10.815 12.79c-4.97 0-9.014-4.099-9.014-9.136h3.606c0 3.022 2.426 5.481 5.408 5.481 2.981 0 5.408-2.459 5.408-5.48h3.605c0 5.036-4.043 9.134-9.013 9.134Z"
+            />
+          </g>
+          <defs>
+            <clipPath id="a">
+              <path fill="#fff" d="M0 0h36.053v36.54H0z" />
+            </clipPath>
+          </defs>
+        </svg>
+        <p>TAROMA BRAND</p>
+      </div>
+      <div class="container__form">
+        <div
+          class="alert alert-danger alert-dismissible fade show"
+          role="alert"
+          th:if="${error != null}"
+        >
+          <strong>Error!</strong>
+          <span th:text="${error}"></span>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form th:action="@{/formulario}" class="form" id="form" method="post">
+          <p class="form__title">Inicio de Sesión</p>
+          <div class="form-group" id="email-group">
+            <label for="email">Correo Electronico</label>
+            <div class="form-group__input">
+              <i class="fa-solid fa-user"></i>
+              <input
+                class="form__input"
+                type="username"
+                name="username"
+                id="email"
+                placeholder="user@gmail.com"
+                title="Email Invalido"
+                required
+              />
+              <i class="form__input-estado fas fa-times-circle"></i>
+            </div>
+            <span class="form__input-error">Escriba un Correo Válido</span>
+          </div>
+          <div class="form-group" id="password-group">
+            <label for="password">Contraseña</label>
+            <div class="form-group__input">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                class="form__input"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="*********"
+                required
+              />
+              <i class="form__input-estado fas fa-times-circle"></i>
+            </div>
+            <span class="form__input-error">Escriba una Contraseña Válida</span>
+          </div>
+          <div class="form__message" id="form__message">
+            <p>
+              <i class="fas fa-exclamation-triangle"></i> Error! Please complete
+              the form.
+            </p>
+          </div>
+          <!-- <input type="submit" value="Iniciar Sesión"> -->
+          <!-- <a class="btn" th:href="@{/dashboard}"></a> -->
+          <button type="submit" class="btn">Iniciar Sesión</button>
+        </form>
+        <div class="password">
+          <p>Olvidaste Tu Contraseña? <a href="">Recordar</a></p>
+        </div>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>
