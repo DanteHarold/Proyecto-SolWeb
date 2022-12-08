@@ -64,7 +64,7 @@ public class SpringSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests()
-        .anyRequest().authenticated()
+       // .anyRequest().authenticated()
         .and().formLogin().loginPage("/formulario").defaultSuccessUrl("/",true).permitAll()
         .and().logout().permitAll();
         return http.build();
